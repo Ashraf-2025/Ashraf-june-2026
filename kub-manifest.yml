@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: deplyoment
+metdata:
+  name: Ashraf-deplyoment
+spec: 
+  replicas: 2
+  selecor:
+    matchleble:
+      app: Ashraf-app
+  template:
+    metdata:
+      labels: 
+        app: Ashraf-app
+    spec: 
+      containers:
+        - name: app
+          image: nginx
+          potr:
+            - containerPort: 80         
+
+
+

@@ -1,0 +1,17 @@
+--- 
+- name: Install and start Nginx on Ashraf-2025
+  host: dev
+  become:  yes
+
+  task:
+   - name:  Install Nginx
+     yum: 
+      name: Nginx
+      state:  present
+
+
+- name: start Nginx and enable
+  service: 
+   - name:  Nginx
+     state: started
+     enabled: yes
