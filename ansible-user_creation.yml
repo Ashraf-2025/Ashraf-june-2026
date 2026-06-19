@@ -1,0 +1,10 @@
+---
+- hosts: localhost 
+  user: root
+  become: true
+  tasks: 
+    - name: create user DB-eam
+      user:
+        name: Ashraf-DB
+        state: present
+        shell: /bin/bahs  
