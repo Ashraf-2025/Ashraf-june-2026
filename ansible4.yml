@@ -1,0 +1,14 @@
+---
+- name: install git and wget on staging severs
+  hosts: stage-server
+  become: true
+  user: root
+
+  tasks:
+    - name: install git and wget
+      yum:
+        name:
+          - git
+          - wget
+        state: present
+      :wq    
