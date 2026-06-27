@@ -1,0 +1,16 @@
+---
+ - name: mange Nginx
+ hosts: all
+ becomes: yes
+ 
+ tasks: 
+   - name: Update Nginx file
+       copy:
+         src:  /usr/shar/nginx/html/index.html
+         dest: /usr/shar/nginx/html/index.html
+     notify: Restart Nginx
+
+  handlers: 
+    - name: Restart Nginx
+        name: nginx
+        state: Restarted
