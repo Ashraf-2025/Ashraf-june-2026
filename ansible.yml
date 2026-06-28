@@ -1,0 +1,20 @@
+---
+- name: install nginx web server
+  hosts: all
+  user: root
+  connection: ssh
+  gather_fact: yes
+
+  tasks: 
+    - name: install Nginx
+      yum: 
+        name: Nginx
+        state: present
+        enabled: yes
+      notify: Nginx Restarted
+
+  handlers:
+    - name: Nginx Restarted
+      service: 
+        name: Nginx
+        state: Restarted        
