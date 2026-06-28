@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Brocken-Pod
+spec:
+  containers:
+    name: Nginx-Cont-Brkn-app
+    image: Nginx  
+      
+
