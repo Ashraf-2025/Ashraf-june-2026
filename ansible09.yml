@@ -1,0 +1,11 @@
+---
+- name: Deploy template for Pathnex (pathnex.conf)
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Copy template file(pathnex.conf)
+      template:
+        src: pathnex.conf.j2
+        dest: /etc/pathnex.conf
+

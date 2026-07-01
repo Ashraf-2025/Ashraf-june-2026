@@ -1,0 +1,7 @@
+piVersion: v1
+kind: ConfigMap
+metadata:
+  name: Ashraf-config
+data:
+  APP_MODE: "production"
+  WELCOME_MSG: "Hello "Ashraf
